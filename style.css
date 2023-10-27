@@ -1,0 +1,47 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgb(106, 0, 255), pink);
+}
+
+.heart {
+    height: 15rem;
+    width: 15rem;
+    background: red;
+    position: relative;
+    rotate: 45deg;
+    transition: .2s;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::before {
+    transform: translate(-50%, 0);
+}
+
+.heart::after {
+    transform: translate(0, -50%);
+}
+
+h1 {
+    margin-top: 4rem;
+    color: rgb(0, 255, 204);
+}
+
+@media (max-width: 450px) {
+    .heart {
+        height: 10rem;
+        width: 10rem;
+    }
+}
